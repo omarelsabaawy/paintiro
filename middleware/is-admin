@@ -1,0 +1,10 @@
+module.exports = (req, res, next) => {
+    admin = localStorage.getItem("admin");
+    console.log(admin);
+    if (admin!="2110100") {
+        res.render('../views/pages/admin/loginAsAdmin.ejs',{
+            message:false
+        });
+    }
+    next();
+}
